@@ -1,0 +1,9 @@
+{
+    "_ARRAY_DIMENSIONS": [
+        "n_samples",
+        "x",
+        "y",
+        "n_channel"
+    ],
+    "coordinates": "id"
+}
