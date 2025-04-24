@@ -7,8 +7,8 @@ from tqdm import tqdm
 import matplotlib.pyplot as plt
 
 def main():
-    train_set = torch.utils.data.Subset(SEVIRDatasetZarr('data/sub-sevir-train.zarr'), range(100))
-    val_set = torch.utils.data.Subset(SEVIRDatasetZarr('data/sub-sevir-val.zarr'), range(100))
+    train_set = torch.utils.data.Subset(SEVIRDatasetZarr('data/sub-sevir-train.zarr'), range(1000))
+    val_set = torch.utils.data.Subset(SEVIRDatasetZarr('data/sub-sevir-val.zarr'), range(1000))
     # train_set = SEVIRDatasetZarr('data/sub-sevir-train.zarr')
     # val_set = SEVIRDatasetZarr('data/sub-sevir-val.zarr')
 
@@ -23,7 +23,7 @@ def main():
     train_losses = []
     val_losses = []
 
-    for epoch in range(2):
+    for epoch in range(5):
         model.train()
         total_loss = 0
         for x, y in tqdm(train_loader, desc=f"Epoch {epoch+1} [Train]"):

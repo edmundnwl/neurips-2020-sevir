@@ -1,4 +1,3 @@
-# sevir_dataset.py
 import xarray as xr
 import numpy as np
 import torch
