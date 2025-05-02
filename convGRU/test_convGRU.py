@@ -1,7 +1,7 @@
 import torch
 from torch.utils.data import DataLoader
 from torch import nn
-from sevir_dataset import SEVIRDatasetZarr
+from convGRU.sevir_dataset import SEVIRDatasetZarr
 from convGRU.model_convGRU import ConvGRUNowcast
 from tqdm import tqdm
 
@@ -11,9 +11,9 @@ test_set = SEVIRDatasetZarr(TEST_PATH)
 test_loader = DataLoader(test_set, batch_size=2)
 
 # Load trained model
-# 根据错误信息，调整 input_dim 和 output_dim
+
 model = ConvGRUNowcast(input_dim=13, hidden_dim=[64, 128], output_dim=12)
-model.load_state_dict(torch.load('convgru_nowcast.pth', map_location='cpu'))
+model.load_state_dict(torch.load('convGRU/convgru_nowcast.pth', map_location='cpu'))
 model.eval()
 
 # Loss function
