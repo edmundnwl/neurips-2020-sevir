@@ -5,3 +5,4 @@ Code for paper: SEVIR : A Storm Event Imagery Dataset for Deep Learning Applicat
 The folders that we worked on are : convGRU, cnn, rf, svm, unet 
 
 ### Original Github Link
+https://github.com/MIT-AI-Accelerator/neurips-2020-sevir
